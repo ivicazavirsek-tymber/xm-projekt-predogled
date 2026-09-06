@@ -246,9 +246,9 @@
     </div>
     <div class="hero-photo" id="heroMedia">
       <video id="heroVideo" muted playsinline autoplay preload="auto" aria-label="XM PROJEKT video">
-        <source src="images/hero.mp4" type="video/mp4">
+        <source src="images/hero.mp4?v=2" type="video/mp4">
       </video>
-      <img class="hero-end" id="heroEnd" src="images/hero-end.jpg" alt="XM PROJEKT">
+      <img class="hero-end" id="heroEnd" src="images/hero-end.jpg?v=2" alt="XM PROJEKT">
     </div>
   </section>
 
@@ -404,20 +404,14 @@
   <div class="toast" id="toast">Povpraševanje je zabeleženo. Hvala — v živi verziji bi poklicali na 051 400 444.</div>
 
   <script>
+    const links = document.getElementById("links");
     const heroVideo = document.getElementById("heroVideo");
     const heroMedia = document.getElementById("heroMedia");
-    let heroLoops = 0;
     if (heroVideo) {
       heroVideo.play().catch(() => {});
       heroVideo.addEventListener("ended", () => {
-        heroLoops += 1;
-        if (heroLoops < 3) {
-          heroVideo.currentTime = 0;
-          heroVideo.play();
-        } else {
-          heroMedia.classList.add("is-end");
-          heroVideo.pause();
-        }
+        heroMedia.classList.add("is-end");
+        heroVideo.pause();
       });
     }
     document.getElementById("menu").onclick = () => links.classList.toggle("open");
