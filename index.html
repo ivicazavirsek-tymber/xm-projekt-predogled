@@ -199,7 +199,16 @@
       }
       .menu-btn { display: grid; place-items: center; }
       .hero, .stats-row, .cards, .sec-head, .split, .about-grid, form, .contact-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 0; }
       .hero-copy { padding: 40px 24px; }
+      .hero-photo { background: #7a828c; }
+      .hero-photo img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+        object-position: center;
+      }
       .split-copy { padding: 40px 24px; }
       .preview-bar { font-size: 12px; }
       .logo-xm { font-size: 36px; }
