@@ -44,9 +44,8 @@
     }
 
     .logo { display: flex; align-items: center; line-height: 1; }
-    .logo-mark { height: 46px; width: auto; display: block; }
-    .logo.light .logo-fill { fill: #fff; }
-    .logo.light .logo-stroke { stroke: #e0c48a; }
+    .logo-mark { height: 52px; width: auto; display: block; }
+    .logo.light { background: #fff; padding: 4px 8px; }
 
     .nav {
       position: fixed; top: 36px; left: 0; right: 0; z-index: 40;
@@ -208,23 +207,8 @@
 <body>
   <div class="preview-bar">Predogled predloga spletne strani · ni uradna stran podjetja XM PROJEKT</div>
   <header class="nav" id="nav">
-    <a class="logo" href="#domov" aria-label="XM PROJEKT">
-      <svg class="logo-mark" viewBox="0 0 250 72" aria-hidden="true">
-        <defs>
-          <linearGradient id="xmBlue" x1="0" y1="1" x2="0" y2="0">
-            <stop offset="0" stop-color="#153a82"/>
-            <stop offset="1" stop-color="#2a63c7"/>
-          </linearGradient>
-        </defs>
-        <g class="logo-stroke" fill="url(#xmBlue)" stroke="#c9a45c" stroke-width="1.35" stroke-linejoin="miter">
-          <g transform="translate(38,36) skewX(-8)">
-            <polygon class="logo-fill" points="-28,-28 -14,-28 14,28 0,28"/>
-            <polygon class="logo-fill" points="0,-28 14,-28 -14,28 -28,28"/>
-          </g>
-          <path class="logo-fill" d="M56 56C58 18 78 12 86 36 90 12 112 12 116 38h84v6h-82c-4-22-22-20-26 6-2 12-6 14-36 6z"/>
-        </g>
-        <text x="88" y="68" fill="#c9a45c" font-family="Montserrat, sans-serif" font-size="11.5" font-weight="800" font-style="italic" letter-spacing="2.4">PROJEKT</text>
-      </svg>
+    <a class="logo" href="#domov">
+      <img class="logo-mark" src="images/logo-xm.jpg?v=1" alt="XM PROJEKT">
     </a>
     <nav class="nav-links" id="links">
       <a href="#storitve">Storitve</a>
@@ -395,17 +379,8 @@
 
   <footer>
     <div class="wrap foot">
-      <a class="logo light" href="#domov" aria-label="XM PROJEKT">
-        <svg class="logo-mark" viewBox="0 0 250 72" aria-hidden="true">
-          <g class="logo-stroke" fill="#fff" stroke="#e0c48a" stroke-width="1.35" stroke-linejoin="miter">
-            <g transform="translate(38,36) skewX(-8)">
-              <polygon class="logo-fill" points="-28,-28 -14,-28 14,28 0,28"/>
-              <polygon class="logo-fill" points="0,-28 14,-28 -14,28 -28,28"/>
-            </g>
-            <path class="logo-fill" d="M56 56C58 18 78 12 86 36 90 12 112 12 116 38h84v6h-82c-4-22-22-20-26 6-2 12-6 14-36 6z"/>
-          </g>
-          <text x="88" y="68" fill="#e0c48a" font-family="Montserrat, sans-serif" font-size="11.5" font-weight="800" font-style="italic" letter-spacing="2.4">PROJEKT</text>
-        </svg>
+      <a class="logo light" href="#domov">
+        <img class="logo-mark" src="images/logo-xm.jpg?v=1" alt="XM PROJEKT">
       </a>
       <p>XM PROJEKT, proizvodnja in storitve d.o.o. · predogled spletne strani</p>
     </div>
