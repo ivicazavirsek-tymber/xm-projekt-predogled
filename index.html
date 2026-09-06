@@ -120,9 +120,18 @@
       background: rgba(0,0,0,.28);
       opacity: 0; pointer-events: none;
     }
-    .hero-flash img {
-      width: min(58%, 340px); height: auto;
-      filter: drop-shadow(0 0 28px rgba(224,196,138,.55));
+    .hero-flash-copy {
+      text-align: center; color: #fff;
+      text-shadow: 0 0 24px rgba(224,196,138,.7);
+    }
+    .hero-flash-copy strong {
+      display: block; font-size: clamp(28px, 4.2vw, 48px);
+      font-weight: 800; letter-spacing: .04em; line-height: 1.1;
+    }
+    .hero-flash-copy span {
+      display: block; margin-top: 10px;
+      font-size: clamp(16px, 2.2vw, 22px); font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--gold-soft);
     }
     .hero-photo.is-flash .hero-flash { animation: logoFlicker 2.1s ease-in-out forwards; }
     .hero-photo.is-end video { opacity: 0; }
@@ -272,7 +281,10 @@
         <source src="images/hero.mp4?v=3" type="video/mp4">
       </video>
       <div class="hero-flash" id="heroFlash">
-        <img src="images/logo-oficial.png?v=3" alt="">
+        <div class="hero-flash-copy">
+          <strong>051 400 444</strong>
+          <span>Pokličite nas</span>
+        </div>
       </div>
       <img class="hero-end" id="heroEnd" src="images/kamion-logo.jpg" alt="XM PROJEKT">
     </div>
