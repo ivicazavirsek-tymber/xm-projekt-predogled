@@ -4,30 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Predogled — XM PROJEKT betonarna Vrhnika</title>
-  <meta name="description" content="Predogled predloga spletne strani za XM PROJEKT d.o.o., betonarna na Vrhniki. Ni uradna spletna stran podjetja.">
+  <meta name="description" content="Predogled predloga spletne strani za XM PROJEKT d.o.o. Ni uradna spletna stran podjetja.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #14161a;
-      --ink-soft: #2c3038;
-      --muted: #5c615c;
-      --line: rgba(20, 22, 26, 0.12);
-      --paper: #f4f1ea;
-      --paper-2: #ebe6dc;
-      --white: #fbfaf6;
-      --copper: #c45c26;
-      --copper-deep: #9a4318;
-      --sand: #c9b48a;
-      --hero-h: 100svh;
+      --blue: #1c4ea8;
+      --blue-deep: #153a82;
+      --blue-night: #0f2a5c;
+      --gold: #c9a45c;
+      --gold-soft: #e0c48a;
+      --ink: #12203c;
+      --muted: #5b6780;
+      --line: rgba(18, 32, 60, 0.12);
+      --paper: #f4f7fc;
+      --white: #ffffff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: "Instrument Sans", "Segoe UI", sans-serif;
+      font-family: Montserrat, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--paper);
       line-height: 1.5;
@@ -39,206 +38,213 @@
 
     .preview-bar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-      background: var(--copper); color: #fff;
+      background: var(--blue); color: #fff;
       text-align: center; font-size: 13px; font-weight: 600;
       letter-spacing: .04em; padding: 8px 16px;
     }
+
+    .logo {
+      display: flex; align-items: flex-end; gap: 8px; line-height: 1;
+    }
+    .logo-xm {
+      font-family: "Great Vibes", cursive;
+      font-size: 44px; color: var(--blue); font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+    .logo-projekt {
+      font-size: 12px; font-weight: 800; letter-spacing: .18em;
+      color: var(--gold); padding-bottom: 8px;
+    }
+    .logo.light .logo-xm { color: #fff; }
+    .logo.light .logo-projekt { color: var(--gold-soft); }
+
     .nav {
-      position: fixed;
-      top: 36px; left: 0; right: 0;
-      z-index: 40;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 28px;
-      transition: background .25s, backdrop-filter .25s, box-shadow .25s;
+      position: fixed; top: 36px; left: 0; right: 0; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 28px;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(15, 42, 92, .08);
     }
-    .nav.scrolled {
-      background: rgba(20, 22, 26, 0.92);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 8px 30px rgba(0,0,0,.18);
-    }
-    .brand { display: flex; align-items: center; gap: 12px; color: #fff; }
-    .mark {
-      width: 42px; height: 42px;
-      border: 1.5px solid var(--sand);
-      display: grid; place-items: center;
-      font-weight: 700; letter-spacing: .04em;
-      font-size: 13px;
-    }
-    .brand strong { display: block; font-size: 14px; letter-spacing: .12em; }
-    .brand span { display: block; font-size: 10px; letter-spacing: .18em; color: var(--sand); text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 28px; color: #efece4; font-size: 14px; }
-    .nav-links a:hover { color: var(--sand); }
+    .nav-links { display: flex; align-items: center; gap: 26px; color: var(--ink); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-phone { color: var(--blue); font-weight: 800; letter-spacing: .04em; }
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--copper); color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--blue); color: #fff;
       padding: 12px 20px; border: 0; cursor: pointer;
-      letter-spacing: .06em; text-transform: uppercase; font-size: 12px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; font-size: 12px; font-weight: 700;
     }
-    .btn:hover { background: var(--copper-deep); }
-    .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.45); }
-    .btn.ghost:hover { background: #fff; color: var(--ink); }
-    .btn.dark { background: var(--ink); }
+    .btn:hover { background: var(--blue-deep); }
+    .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.55); color: #fff; }
+    .btn.ghost:hover { background: #fff; color: var(--blue); }
+    .btn.gold { background: var(--gold); color: var(--blue-night); }
+    .btn.gold:hover { background: var(--gold-soft); }
     .menu-btn {
-      display: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.35);
-      background: transparent; color: #fff; cursor: pointer;
+      display: none; width: 42px; height: 42px; border: 1px solid var(--line);
+      background: transparent; color: var(--blue); cursor: pointer;
     }
 
     .hero {
-      min-height: var(--hero-h);
-      background:
-        linear-gradient(180deg, rgba(16,17,20,.55) 0%, rgba(16,17,20,.28) 42%, rgba(16,17,20,.72) 100%),
-        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80") center/cover;
+      min-height: 100svh;
+      display: grid; grid-template-columns: 1fr 1.15fr;
+      margin-top: 102px;
+      background: var(--blue-night);
       color: #fff;
-      display: grid;
-      align-items: end;
-      padding: 160px 0 56px;
+    }
+    .hero-copy {
+      padding: 64px 40px 56px 8vw;
+      display: flex; flex-direction: column; justify-content: center;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(201,164,92,.22), transparent 28%),
+        var(--blue-night);
+      position: relative;
+    }
+    .hero-copy::before {
+      content: "♣";
+      position: absolute; right: 8%; top: 12%;
+      font-size: 140px; color: rgba(201,164,92,.12); transform: rotate(-12deg);
     }
     .kicker {
-      color: var(--sand); letter-spacing: .28em; text-transform: uppercase;
-      font-size: 12px; margin-bottom: 18px;
+      color: var(--gold-soft); letter-spacing: .28em; text-transform: uppercase;
+      font-size: 11px; font-weight: 700; margin-bottom: 18px;
     }
     h1 {
-      font-family: "Instrument Serif", Georgia, serif;
-      font-size: clamp(44px, 7vw, 92px);
-      font-weight: 400; line-height: .95; max-width: 10ch;
+      font-size: clamp(36px, 4.6vw, 64px);
+      font-weight: 800; line-height: 1.05; letter-spacing: -.03em; max-width: 12ch;
     }
-    .hero p { max-width: 38rem; margin: 22px 0 32px; color: #ddd8cc; font-size: 18px; }
-      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .stats {
-      background: var(--ink); color: #fff; padding: 28px 0;
-    }
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-    }
-    .stats b { display: block; font-size: 22px; font-weight: 600; }
-    .stats span { color: #c9c3b6; font-size: 13px; }
+    .hero p { max-width: 34rem; margin: 20px 0 28px; color: #d7e3f7; font-size: 17px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-photo { overflow: hidden; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 55%; min-height: 420px; }
 
-    section, .split { scroll-margin-top: 78px; }
-    #domov { scroll-margin-top: 0; }
+    .stats { background: var(--blue); color: #fff; padding: 26px 0; }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stats b { display: block; font-size: 22px; font-weight: 800; }
+    .stats span { color: var(--gold-soft); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+
+    section, .split { scroll-margin-top: 108px; }
     section { padding: 88px 0; }
     .sec-head { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; margin-bottom: 48px; }
-    .label { color: var(--copper); letter-spacing: .22em; text-transform: uppercase; font-size: 12px; font-weight: 600; }
-    h2 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(32px, 4vw, 52px); font-weight: 400; line-height: 1.05; }
-    .lede { color: var(--muted); font-size: 18px; }
+    .label { color: var(--blue); letter-spacing: .22em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+    h2 { font-size: clamp(28px, 3.4vw, 44px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; }
+    .lede { color: var(--muted); font-size: 17px; }
 
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card {
-      background: var(--white); border: 1px solid var(--line); overflow: hidden;
-    }
+    .card { background: var(--white); border: 1px solid var(--line); overflow: hidden; }
     .card img { height: 210px; width: 100%; object-fit: cover; }
     .card-body { padding: 24px; }
-    .card h3 { font-size: 22px; margin: 0 0 10px; }
+    .card h3 { font-size: 20px; margin: 0 0 10px; }
     .card p { color: var(--muted); }
-    .card ul { margin-top: 16px; padding-left: 18px; color: var(--ink-soft); }
+    .card ul { margin-top: 16px; padding-left: 18px; color: var(--ink); }
 
-    .split { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 560px; }
-    .split-img {
-      background: url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80") center/cover;
-    }
-    .split-copy { background: var(--ink); color: #efece4; padding: 72px 56px; }
+    .split { display: grid; grid-template-columns: 1.08fr .92fr; min-height: 540px; }
+    .split-img { background: url("images/kamion-flota.jpg") center 58%/cover; }
+    .split-copy { background: var(--blue); color: #e8eef8; padding: 72px 56px; }
+    .split-copy .label { color: var(--gold-soft); }
     .split-copy h2 { color: #fff; margin: 12px 0 18px; }
-    .split-copy p { color: #c9c3b6; margin-bottom: 16px; }
+    .split-copy p { margin-bottom: 16px; }
     .checks { display: grid; gap: 10px; margin-top: 28px; }
-    .checks li { list-style: none; display: flex; gap: 10px; }
-    .checks i {
-      width: 18px; height: 18px; border: 1px solid var(--sand); flex: none; margin-top: 3px;
+    .checks li { list-style: none; display: flex; gap: 10px; align-items: flex-start; }
+    .clover {
+      width: 16px; height: 16px; flex: none; margin-top: 4px;
+      background: var(--gold);
+      clip-path: path("M8 15 C8 15 2 11 2 7 C2 4.5 4 3 6 4 C7 2 9 2 10 4 C12 3 14 4.5 14 7 C14 11 8 15 8 15 Z");
     }
 
-    .about { background: var(--paper-2); }
+    .about { background: #eef2f8; }
     .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
     .facts { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
     .facts div { background: var(--white); padding: 18px 20px; }
-    .facts dt { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-    .facts dd { margin-top: 4px; font-weight: 600; }
+    .facts dt { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .facts dd { margin-top: 4px; font-weight: 700; }
 
-    .order { background: var(--ink); color: #efece4; }
+    .order { background: var(--blue-night); color: #d7e3f7; }
+    .order .label { color: var(--gold-soft); }
     .order h2 { color: #fff; }
     form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
     form .full { grid-column: 1 / -1; }
-    label { display: grid; gap: 6px; font-size: 13px; color: #c9c3b6; }
+    label { display: grid; gap: 6px; font-size: 13px; color: #b8c7e0; font-weight: 600; }
     input, select, textarea {
-      background: #1d2026; border: 1px solid rgba(255,255,255,.12); color: #fff;
+      background: #17356f; border: 1px solid rgba(255,255,255,.14); color: #fff;
       padding: 12px 14px; outline: none;
     }
-    input:focus, select:focus, textarea:focus { border-color: var(--sand); }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
     textarea { min-height: 120px; resize: vertical; }
-    .form-note { color: #9a9488; font-size: 13px; margin-top: 12px; }
+    .form-note { color: #8fa3c4; font-size: 13px; margin-top: 12px; font-weight: 400; }
 
     .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px; }
     .contact-card { background: var(--white); border: 1px solid var(--line); padding: 28px; }
-    .contact-card a { color: var(--copper-deep); font-weight: 600; }
-    .map {
-      min-height: 360px; border: 1px solid var(--line); position: relative; overflow: hidden;
-    }
+    .contact-card a { color: var(--blue); font-weight: 800; }
+    .map { min-height: 360px; border: 1px solid var(--line); position: relative; overflow: hidden; }
     .map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
     .map-pin {
-      position: absolute; left: 16px; top: 16px;
-      background: var(--ink); color: #fff; padding: 10px 14px; font-size: 13px; z-index: 1;
+      position: absolute; left: 16px; top: 16px; z-index: 1;
+      background: var(--blue); color: #fff; padding: 10px 14px; font-size: 13px; font-weight: 700;
     }
 
-    footer {
-      background: #0e1013; color: #b9b3a6; padding: 36px 0 28px; font-size: 13px;
-    }
-    .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer { background: var(--blue-night); color: #9db0d0; padding: 36px 0 28px; font-size: 13px; }
+    .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
     .toast {
       position: fixed; bottom: 24px; right: 24px; background: #fff; color: var(--ink);
-      padding: 14px 18px; box-shadow: 0 12px 40px rgba(0,0,0,.18); display: none; z-index: 50;
+      padding: 14px 18px; box-shadow: 0 12px 40px rgba(15,42,92,.18); display: none; z-index: 50;
     }
     .toast.show { display: block; }
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-links.open {
-        display: flex; flex-direction: column; position: absolute; top: 110px; left: 16px; right: 16px;
-        background: #16181c; padding: 20px; gap: 16px;
+        display: flex; flex-direction: column; position: absolute; top: 72px; left: 12px; right: 12px;
+        background: #fff; padding: 20px; gap: 16px; box-shadow: 0 12px 30px rgba(15,42,92,.12);
       }
       .menu-btn { display: grid; place-items: center; }
-      .stats-row, .cards, .sec-head, .split, .about-grid, form, .contact-grid { grid-template-columns: 1fr; }
+      .hero, .stats-row, .cards, .sec-head, .split, .about-grid, form, .contact-grid { grid-template-columns: 1fr; }
+      .hero-copy { padding: 40px 24px; }
       .split-copy { padding: 40px 24px; }
-      .hero { padding-top: 150px; }
-      .preview-bar { font-size: 12px; padding: 8px 12px; }
+      .preview-bar { font-size: 12px; }
+      .logo-xm { font-size: 36px; }
     }
   </style>
 </head>
 <body>
   <div class="preview-bar">Predogled predloga spletne strani · ni uradna stran podjetja XM PROJEKT</div>
   <header class="nav" id="nav">
-    <a class="brand" href="#domov">
-      <span class="mark">XM</span>
-      <span>
-        <strong>XM PROJEKT</strong>
-        <span>Betonarna Vrhnika</span>
-      </span>
+    <a class="logo" href="#domov" aria-label="XM PROJEKT">
+      <span class="logo-xm">Xm</span>
+      <span class="logo-projekt">PROJEKT</span>
     </a>
     <nav class="nav-links" id="links">
       <a href="#storitve">Storitve</a>
-      <a href="#kakovost">Kakovost</a>
+      <a href="#vozni-park">Vozni park</a>
       <a href="#o-nas">O nas</a>
       <a href="#kontakt">Kontakt</a>
+      <a class="nav-phone" href="tel:+38651400444">051 400 444</a>
       <a class="btn" href="#narocilo">Naroči beton</a>
     </nav>
     <button class="menu-btn" type="button" aria-label="Meni" id="menu">☰</button>
   </header>
 
   <section class="hero" id="domov">
-    <div class="wrap">
+    <div class="hero-copy">
       <p class="kicker">Pod Hruševco 17 · 1360 Vrhnika</p>
       <h1>Sveži beton. Zanesljiva dobava.</h1>
-      <p>Betonarna XM PROJEKT pripravlja svežo betonsko mešanico ter pesek in gramoz za gradbišča v Ljubljani in osrednji Sloveniji — za zasebne gradnje in investitorje.</p>
+      <p>XM PROJEKT pripravlja svežo betonsko mešanico ter pesek in gramoz za gradbišča v Ljubljani in osrednji Sloveniji — z lastnim voznim parkom mešalcev.</p>
       <div class="hero-actions">
-        <a class="btn" href="#narocilo">Naroči beton</a>
-        <a class="btn ghost" href="tel:+38617553737">01 755 37 37</a>
+        <a class="btn gold" href="#narocilo">Naroči beton</a>
+        <a class="btn ghost" href="tel:+38651400444">051 400 444</a>
       </div>
     </div>
+    <div class="hero-photo">
+      <img src="images/kamion-logo.jpg" alt="XM PROJEKT mešalec betona z logotipom in številko 051 400 444">
+    </div>
   </section>
+
   <div class="stats">
     <div class="wrap stats-row">
       <div><b>2012</b><span>leto ustanovitve</span></div>
       <div><b>Vrhnika</b><span>lastna betonarna</span></div>
       <div><b>Agregati</b><span>pesek, gramoz, glina</span></div>
-      <div><b>B2B + B2C</b><span>izvajalci in fizične osebe</span></div>
+      <div><b>051 400 444</b><span>naročanje betona</span></div>
     </div>
   </div>
 
@@ -249,16 +255,16 @@
           <p class="label">Kaj dobavljamo</p>
           <h2>Beton, agregati in prevoz z ene lokacije.</h2>
         </div>
-        <p class="lede">Glavna dejavnost je pridobivanje gramoza, peska in gline ter proizvodnja sveže betonske mešanice. Naročanje poteka neposredno v betonarni — hitro, prilagodljivo in brez nepotrebnih vmesnikov.</p>
+        <p class="lede">Glavna dejavnost je pridobivanje gramoza, peska in gline ter proizvodnja sveže betonske mešanice. Naročanje: 051 400 444.</p>
       </div>
       <div class="cards">
         <article class="card">
-          <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Priprava betona">
+          <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Sveži beton">
           <div class="card-body">
             <h3>Sveži beton</h3>
-            <p>Betonske mešanice za temelje, plošče, stebre, dvorišča in zahtevnejše vgradnje — vključno z delom pri nizkih temperaturah.</p>
+            <p>Betonske mešanice za temelje, plošče, stebre, dvorišča in zahtevnejše vgradnje.</p>
             <ul>
-              <li>Naročanje: 01 755 37 37</li>
+              <li>Naročanje: 051 400 444</li>
               <li>info@xmprojekt.si</li>
             </ul>
           </div>
@@ -267,7 +273,7 @@
           <img src="https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Pesek in gramoz">
           <div class="card-body">
             <h3>Pesek in gramoz</h3>
-            <p>Lastno pridobivanje agregatov za beton in gradbena dela. Stabilna surovinska osnova pomeni predvidljivo kakovost mešanice.</p>
+            <p>Lastno pridobivanje agregatov za beton in gradbena dela. Stabilna surovinska osnova pomeni predvidljivo kakovost.</p>
             <ul>
               <li>SKD 08.120 — gramoz, pesek, glina</li>
               <li>SKD 23.630 — sveži beton</li>
@@ -275,10 +281,10 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dobava na gradbišče">
+          <img src="images/kamion-flota.jpg" alt="Vozni park XM PROJEKT">
           <div class="card-body">
             <h3>Dobava na gradbišče</h3>
-            <p>Dobava za Ljubljano in širšo okolico. Sodelujemo z izvajalci, investitorji in fizičnimi osebami — od manjših zalivanj do večjih etap.</p>
+            <p>Lastni mešalci za Ljubljano in širšo okolico. Sodelujemo z izvajalci, investitorji in fizičnimi osebami.</p>
             <ul>
               <li>Javna naročila: da</li>
               <li>Prilagodljivi termini</li>
@@ -289,18 +295,18 @@
     </div>
   </section>
 
-  <div class="split" id="kakovost">
-    <div class="split-img" role="img" aria-label="Gradbišče z betonom"></div>
+  <div class="split" id="vozni-park">
+    <div class="split-img" role="img" aria-label="Vozni park XM PROJEKT"></div>
     <div class="split-copy">
-      <p class="label">Kakovost</p>
-      <h2>Mešanica, ki drži projekt na terminu.</h2>
-      <p>XM PROJEKT je vrhniško podjetje z več kot desetletjem izkušenj. Konkurenčna prednost je prilagodljivost: hitra odzivnost betonarne, jasen kontakt za naročilo in dobava, ki sledi ritmu gradbišča.</p>
-      <p>Delujemo v skladu s pričakovanji stroke za sveži beton in agregate. Za ponudbo sporočite vrsto betona, količino, lokacijo in želeni termin.</p>
+      <p class="label">Vozni park</p>
+      <h2>Naši mešalci. Vaš beton na terminu.</h2>
+      <p>Flota XM PROJEKT je označena z istim logotipom kot na tej strani: pisano <b>Xm</b>, <b>PROJEKT</b> in številka 051 400 444.</p>
+      <p>Za naročilo pokličite številko, ki je na vsakem vozilu. Sporočite vrsto betona, količino, lokacijo in želeni termin.</p>
       <ul class="checks">
-        <li><i></i> Sveža betonska mešanica po naročilu</li>
-        <li><i></i> Pesek in gramoz z lastnega vira</li>
-        <li><i></i> Dobava za osrednjeslovensko regijo</li>
-        <li><i></i> Ponudnik na javnih naročilih</li>
+        <li><span class="clover"></span> Sveža betonska mešanica po naročilu</li>
+        <li><span class="clover"></span> Pesek in gramoz z lastnega vira</li>
+        <li><span class="clover"></span> Dobava za osrednjeslovensko regijo</li>
+        <li><span class="clover"></span> Ponudnik na javnih naročilih</li>
       </ul>
     </div>
   </div>
@@ -310,14 +316,14 @@
       <div>
         <p class="label">Podjetje</p>
         <h2>XM PROJEKT, proizvodnja in storitve d.o.o.</h2>
-        <p class="lede" style="margin:18px 0 22px">Ustanovljeni 18. 5. 2012 na Vrhniki. Prej smo poslovali tudi kot Projekt Beton. Danes iz betonarne na Pod Hruševco 17 dobavljamo sveži beton ter pesek in gramoz za gradbišča v Ljubljani in osrednji Sloveniji.</p>
-        <p class="lede">Direktor: Mirko Marolt. Lastnik: M INŽENIRING d.o.o. Članstvo: Klub slovenskih podjetnikov (SBC).</p>
+        <p class="lede" style="margin:18px 0 22px">Ustanovljeni 18. 5. 2012 na Vrhniki. Prej smo poslovali tudi kot Projekt Beton. Iz betonarne na Pod Hruševco 17 dobavljamo sveži beton ter pesek in gramoz.</p>
+        <p class="lede">Direktor: Mirko Marolt. Lastnik: M INŽENIRING d.o.o.</p>
       </div>
       <dl class="facts">
         <div><dt>Naslov</dt><dd>Pod Hruševco 17, 1360 Vrhnika</dd></div>
+        <div><dt>Naročanje</dt><dd>051 400 444</dd></div>
         <div><dt>Matična / davčna</dt><dd>6163696000 · SI75110270</dd></div>
         <div><dt>TRR</dt><dd>SI56 1010 0005 7759 906<br>Intesa Sanpaolo</dd></div>
-        <div><dt>Osnovni kapital</dt><dd>190.000 EUR</dd></div>
         <div><dt>E-pošta</dt><dd>info@xmprojekt.si</dd></div>
       </dl>
     </div>
@@ -327,13 +333,13 @@
     <div class="wrap">
       <p class="label">Betonarna — naročanje</p>
       <h2>Povejte količino. Pripravimo mešanico.</h2>
-      <p class="lede" style="color:#c9c3b6;max-width:40rem;margin-top:12px">Za nujna naročila pokličite betonarno. Obrazec je namenjen ponudbam za večje količine in usklajevanje termina.</p>
+      <p class="lede" style="color:#b8c7e0;max-width:40rem;margin-top:12px">Za nujna naročila pokličite <a href="tel:+38651400444" style="color:#fff;font-weight:800">051 400 444</a>. Obrazec je namenjen ponudbam in usklajevanju termina.</p>
       <form id="form">
         <label>Ime in priimek / podjetje
           <input name="name" required placeholder="npr. Gradnje d.o.o.">
         </label>
         <label>Telefon
-          <input name="phone" required placeholder="041 …">
+          <input name="phone" required placeholder="051 …">
         </label>
         <label>Vrsta betona
           <select name="mix">
@@ -351,7 +357,7 @@
           <textarea name="note" placeholder="Naslov, datum, ura, pumpa da/ne…"></textarea>
         </label>
         <div class="full">
-          <button class="btn" type="submit">Pošlji povpraševanje</button>
+          <button class="btn gold" type="submit">Pošlji povpraševanje</button>
           <p class="form-note">Mockup: sporočilo se ne pošlje na strežnik. V živi različici gre na info@xmprojekt.si.</p>
         </div>
       </form>
@@ -362,10 +368,9 @@
     <div class="wrap contact-grid">
       <div class="contact-card">
         <p class="label">Kontakt</p>
-        <h2 style="font-size:36px;margin:8px 0 18px">Betonarna Vrhnika</h2>
+        <h2 style="font-size:34px;margin:8px 0 18px">Betonarna Vrhnika</h2>
         <p>Pod Hruševco 17<br>1360 Vrhnika, Slovenija</p>
-        <p style="margin:16px 0">Naročanje betona<br><a href="tel:+38617553737">01 755 37 37</a></p>
-        <p>Mobilni<br><a href="tel:+38641305080">041 305 080</a></p>
+        <p style="margin:16px 0">Naročanje betona<br><a href="tel:+38651400444">051 400 444</a></p>
         <p style="margin-top:16px">E-pošta<br><a href="mailto:info@xmprojekt.si">info@xmprojekt.si</a></p>
       </div>
       <div class="map">
@@ -377,17 +382,18 @@
 
   <footer>
     <div class="wrap foot">
-      <p>XM PROJEKT, proizvodnja in storitve d.o.o. · mockup predlog spletne strani</p>
-      <p>Davčna SI75110270 · Zavezanec za DDV</p>
+      <a class="logo light" href="#domov" aria-label="XM PROJEKT">
+        <span class="logo-xm">Xm</span>
+        <span class="logo-projekt">PROJEKT</span>
+      </a>
+      <p>XM PROJEKT, proizvodnja in storitve d.o.o. · predogled spletne strani</p>
     </div>
   </footer>
-  <div class="toast" id="toast">Povpraševanje je zabeleženo. Hvala — v živi verziji bi poklicali nazaj.</div>
+  <div class="toast" id="toast">Povpraševanje je zabeleženo. Hvala — v živi verziji bi poklicali na 051 400 444.</div>
 
   <script>
-    const nav = document.getElementById("nav");
     const links = document.getElementById("links");
     document.getElementById("menu").onclick = () => links.classList.toggle("open");
-    addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 12), { passive: true });
     document.getElementById("form").onsubmit = (e) => {
       e.preventDefault();
       const t = document.getElementById("toast");
