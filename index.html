@@ -44,8 +44,8 @@
     }
 
     .logo { display: flex; align-items: center; line-height: 1; }
-    .logo-mark { height: 52px; width: auto; display: block; }
-    .logo.light { background: #fff; padding: 4px 8px; }
+    .logo-mark { height: 58px; width: auto; display: block; object-fit: contain; }
+    .logo.light .logo-mark { height: 64px; }
 
     .nav {
       position: fixed; top: 36px; left: 0; right: 0; z-index: 40;
@@ -77,7 +77,7 @@
     .hero {
       min-height: 100svh;
       display: grid; grid-template-columns: 1fr 1.15fr;
-      margin-top: 102px;
+      margin-top: 112px;
       background: var(--blue-night);
       color: #fff;
     }
@@ -200,7 +200,8 @@
       }
       .split-copy { padding: 40px 24px; }
       .preview-bar { font-size: 12px; }
-      .logo-mark { height: 40px; }
+      .logo-mark { height: 46px; }
+      .logo.light .logo-mark { height: 50px; }
     }
   </style>
 </head>
@@ -208,7 +209,7 @@
   <div class="preview-bar">Predogled predloga spletne strani · ni uradna stran podjetja XM PROJEKT</div>
   <header class="nav" id="nav">
     <a class="logo" href="#domov">
-      <img class="logo-mark" src="images/logo-xm.jpg?v=1" alt="XM PROJEKT">
+      <img class="logo-mark" src="images/logo-oficial.png?v=3" alt="XM PROJEKT">
     </a>
     <nav class="nav-links" id="links">
       <a href="#storitve">Storitve</a>
@@ -380,7 +381,7 @@
   <footer>
     <div class="wrap foot">
       <a class="logo light" href="#domov">
-        <img class="logo-mark" src="images/logo-xm.jpg?v=1" alt="XM PROJEKT">
+        <img class="logo-mark" src="images/logo-oficial-dark.jpg?v=3" alt="XM PROJEKT">
       </a>
       <p>XM PROJEKT, proizvodnja in storitve d.o.o. · predogled spletne strani</p>
     </div>
